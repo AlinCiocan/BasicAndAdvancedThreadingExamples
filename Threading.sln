@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1IsCompleteExample", "IsCompleteExample\1IsCompleteExample.csproj", "{971126BC-18EA-40C4-B6F2-2CC491D961D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2TwoThreads", "2TwoThreads\2TwoThreads.csproj", "{70851048-CC71-4239-ACBA-308FF4BA490B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3TwoTasks", "3TwoTasks\3TwoTasks.csproj", "{4278D104-6AD8-4337-8152-A5DFD6719A71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4TPL", "4TPL\4TPL.csproj", "{1607E12C-FFE6-4C39-93D4-131D731E9F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5PLINQ", "5PLINQ\5PLINQ.csproj", "{A7B6A17B-5122-4FA5-BC88-FCEFAA367D11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6BONUSThreadSleepVsTaskDelay", "6BONUSThreadSleepVsTaskDelay\6BONUSThreadSleepVsTaskDelay.csproj", "{86CDC23B-CA14-4A64-81CE-8C64B9C0A5B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{971126BC-18EA-40C4-B6F2-2CC491D961D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971126BC-18EA-40C4-B6F2-2CC491D961D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971126BC-18EA-40C4-B6F2-2CC491D961D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971126BC-18EA-40C4-B6F2-2CC491D961D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70851048-CC71-4239-ACBA-308FF4BA490B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70851048-CC71-4239-ACBA-308FF4BA490B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70851048-CC71-4239-ACBA-308FF4BA490B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70851048-CC71-4239-ACBA-308FF4BA490B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4278D104-6AD8-4337-8152-A5DFD6719A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4278D104-6AD8-4337-8152-A5DFD6719A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4278D104-6AD8-4337-8152-A5DFD6719A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4278D104-6AD8-4337-8152-A5DFD6719A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1607E12C-FFE6-4C39-93D4-131D731E9F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1607E12C-FFE6-4C39-93D4-131D731E9F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1607E12C-FFE6-4C39-93D4-131D731E9F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1607E12C-FFE6-4C39-93D4-131D731E9F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7B6A17B-5122-4FA5-BC88-FCEFAA367D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B6A17B-5122-4FA5-BC88-FCEFAA367D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B6A17B-5122-4FA5-BC88-FCEFAA367D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B6A17B-5122-4FA5-BC88-FCEFAA367D11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86CDC23B-CA14-4A64-81CE-8C64B9C0A5B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CDC23B-CA14-4A64-81CE-8C64B9C0A5B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CDC23B-CA14-4A64-81CE-8C64B9C0A5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CDC23B-CA14-4A64-81CE-8C64B9C0A5B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D09D724-86BB-420C-AE69-67516031CA0B}
+	EndGlobalSection
+EndGlobal
