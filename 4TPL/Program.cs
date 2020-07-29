@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace _4TPL
 {
@@ -20,12 +23,21 @@ namespace _4TPL
                 "python"
             };
 
-            var dictionary = new Dictionary<string, int>();
+            /*var dictionary = new Dictionary<string, int>();
             foreach (var language in languages)
             {
                 var jobs = SearchJobsByLanguage(language);
                 dictionary.Add(language, jobs);
-            }
+            }*/
+
+            var concurrentDictionary = new ConcurrentDictionary<string, int>();
+            Parallel.ForEach(languages, (language) =>
+            {
+                var jobs = SearchJobsByLanguage(language);
+                concurrentDictionary.TryAdd(language, jobs);
+            });
+
+            var dictionary = concurrentDictionary.ToDictionary(x => x.Key, x => x.Value);
 
             DisplayDictionary(dictionary);
             Console.WriteLine("Time elapsed: " + stopwatch.ElapsedMilliseconds);

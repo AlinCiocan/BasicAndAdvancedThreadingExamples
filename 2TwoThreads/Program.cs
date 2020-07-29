@@ -11,8 +11,22 @@ namespace _2TwoThreads
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            var score1 = GetScore(10);
-            var score2 = GetScore(2);
+            int score1 = 0;
+            var thread1 = new Thread(() =>
+            {
+                score1 = GetScore(10);
+            });
+            thread1.Start();
+
+            int score2 = 0;
+            var thread2 = new Thread(() =>
+            {
+                score2 = GetScore(2);
+            });
+            thread2.Start();
+
+            thread1.Join();
+            thread2.Join();
 
             var sum = score1 + score2;
             Console.WriteLine("Score sums: " + sum);

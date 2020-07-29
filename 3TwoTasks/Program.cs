@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace _3TwoTasks
 {
@@ -11,10 +12,10 @@ namespace _3TwoTasks
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            var score1 = GetScore(10);
-            var score2 = GetScore(2);
+            var task1 = Task.Run(() => GetScore(10));
+            var task2 = Task.Run(() => GetScore(2));
 
-            var sum = score1 + score2;
+            var sum = task1.Result + task2.Result;
             Console.WriteLine("Score sums: " + sum);
             Console.WriteLine("Time elapsed: " + stopwatch.ElapsedMilliseconds + "ms");
         }

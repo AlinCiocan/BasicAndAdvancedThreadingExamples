@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 
 namespace _5PLINQ
@@ -21,12 +22,21 @@ namespace _5PLINQ
             };
 
 
-            var dictionary = new Dictionary<string, int>();
+            /*var dictionary = new Dictionary<string, int>();
             foreach (var language in languages)
             {
                 var jobs = SearchJobsByLanguage(language);
                 dictionary.Add(language, jobs);
-            }
+            }*/
+
+            var dictionary = languages
+                .AsParallel()
+                .Select(language =>
+                {
+                    var jobs = SearchJobsByLanguage(language);
+                    return new { Key = language, Value = jobs };
+                })
+                .ToDictionary(x => x.Key, x => x.Value);
 
             DisplayDictionary(dictionary);
             Console.WriteLine("Time elapsed: " + stopwatch.ElapsedMilliseconds);
